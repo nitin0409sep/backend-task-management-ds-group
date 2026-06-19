@@ -5,7 +5,7 @@ export type TaskFilters = {
   search?: string;
   status?: TaskStatus;
   priority?: TaskPriority;
-  sortBy?: 'priority' | 'dueDate';
+  sortBy?: 'createdAt' | 'priority' | 'dueDate';
   sortOrder?: 'asc' | 'desc';
   page?: number;
   limit?: number;

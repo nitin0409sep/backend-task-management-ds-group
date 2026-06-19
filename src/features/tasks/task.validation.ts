@@ -16,7 +16,7 @@ export const taskQuerySchema = z.object({
   search: z.preprocess(emptyStringToUndefined, z.string().trim().max(160).optional()),
   status: z.preprocess(emptyStringToUndefined, taskStatusSchema.optional()),
   priority: z.preprocess(emptyStringToUndefined, taskPrioritySchema.optional()),
-  sortBy: z.preprocess(emptyStringToUndefined, z.enum(['priority', 'dueDate']).optional()),
+  sortBy: z.preprocess(emptyStringToUndefined, z.enum(['createdAt', 'priority', 'dueDate']).optional()),
   sortOrder: z.preprocess(emptyStringToUndefined, z.enum(['asc', 'desc']).optional()),
   page: z.coerce.number().int().positive().optional(),
   limit: z.coerce.number().int().positive().max(50).optional(),
