@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: task_manager_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: task_manager
+    ports:
+      - '3306:3306'
+    volumes:
+      - task_manager_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-ppassword']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  task_manager_mysql_data:
