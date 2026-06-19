@@ -30,9 +30,9 @@ export const createApp = () => {
     res.json({ status: 'ok' });
   });
 
-  app.use('/api/auth', authRoutes);
-  app.use('/api/users', userRoutes);
-  app.use('/api/tasks', taskRoutes);
+  app.use('/api/v1/auth', authRoutes);
+  app.use('/api/v1/users', userRoutes);
+  app.use('/api/v1/tasks', taskRoutes);
 
   app.use(notFoundMiddleware);
   app.use(errorMiddleware);
