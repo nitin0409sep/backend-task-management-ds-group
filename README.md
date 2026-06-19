@@ -23,8 +23,8 @@ npm run dev
 
 Demo accounts after seeding:
 
-- `admin@example.com` / `Password@123`
-- `user@example.com` / `Password@123`
+- `admin@admin.com` / `Password@123`
+- `user@user.com` / `Password@123`
 
 ## Scripts
 
